@@ -73,9 +73,9 @@ body {
   box-shadow: 0 2px 10px rgba(0,0,0,.2);
 }
 .title-logo {
-  height: 52px;   /* dimensione del logo */
+  height: clamp(60px, 10vw, 100px);   /* dimensione del logo */
   width: auto;
-  margin-right: 6px;
+  margin-right: 10px;
 }
 .container { max-width: 900px; margin: 16px auto; padding: 0 12px 20px; }
 .card {
@@ -280,4 +280,5 @@ def qr(request: Request):
 @app.get("/health", response_class=PlainTextResponse)
 def health():
     return "ok"
+
 
