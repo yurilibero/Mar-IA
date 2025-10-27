@@ -26,7 +26,7 @@ import traceback
 import os
 API_KEY = os.getenv("API_KEY")
 ASSISTANT_ID = os.getenv("ASSISTANT_ID")
-TITLE = "Mar-IA Vell1"  # <-- titolo principale, ora lo rendiamo molto più grande
+TITLE = "Mar-IA"  # <-- titolo principale, ora lo rendiamo molto più grande
 PRIMARY = "#1F4E79"     # blu sobrio
 RATE_LIMIT_SECONDS = 8   # minimo secondi tra due domande dalla stessa IP
 # ====================
@@ -178,7 +178,7 @@ textarea {
 
   <div class="card">
     <h2>Condividi</h2>
-    <div class="notice small">Scansiona il QR per aprire questa chat su smartphone (stessa rete o link pubblico, se pubblicato fuori).</div>
+    <div class="notice small">Scansiona il QR per aprire questa chat su smartphone.</div>
     <div class="qrbox">
       <img alt="QR code" src="/qr" />
     </div>
@@ -280,3 +280,4 @@ def qr(request: Request):
 @app.get("/health", response_class=PlainTextResponse)
 def health():
     return "ok"
+
